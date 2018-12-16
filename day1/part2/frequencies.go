@@ -13,7 +13,7 @@ func readChanges(fileName string) chan int {
 
 	file, err := os.Open(fileName)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, "Usage: %s FILE\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Could not open input file '%s'\n", fileName)
 		os.Exit(1)
 	}
 
